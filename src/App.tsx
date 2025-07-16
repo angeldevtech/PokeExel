@@ -49,7 +49,7 @@ function App() {
 
   onMount(async () => {
     try {
-      const res = await fetch("/pokemon.json");
+      const res = await fetch(import.meta.env.BASE_URL + "/pokemon.json");
       const data = await res.json();
       setAllPokemon(data);
       setFilteredPokemon(data);
